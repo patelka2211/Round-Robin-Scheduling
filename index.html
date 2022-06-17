@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Round Robin Algorithm</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="shortcut icon"
+            href="https://avatars.githubusercontent.com/u/82671701"
+            type="image/x-icon"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Round Robin Scheduling" />
+        <meta
+            name="description"
+            content="Round Robin algorithm is used by operating system to schedule running processes.
+"
+        />
 
-<body>
-    <div class="container">
-        <div class="main">
-            <div class="title">
-                Round Robin algorithm
-            </div>
-            <div class="content">
-                <div class="input_n_button">
-                    <div class="inputs">
-                        <input class="input" id="at" type="text" placeholder="Arrival time (e.g. 1,0,2,3,4,6)" title="Valid input (e.g. 1,0,2,3,4,6)">
-                        <input class="input" id="bt" type="text" placeholder="Burst time (e.g. 4,5,2,1,6,3)" title="Valid input (e.g. 4,5,2,1,6,3)">
-                        <input class="input" id="tq" type="number" onkeyup="validate();" placeholder="Time quantum">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patelka2211.github.io/" />
+        <meta property="og:title" content="Round Robin Scheduling" />
+        <meta
+            property="og:description"
+            content="Round Robin algorithm is used by operating system to schedule running processes.
+"
+        />
+        <meta
+            property="og:image"
+            content="https://avatars.githubusercontent.com/u/82671701"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://patelka2211.github.io/" />
+        <meta property="twitter:title" content="Round Robin Scheduling" />
+        <meta
+            property="twitter:description"
+            content="Round Robin algorithm is used by operating system to schedule running processes.
+"
+        />
+        <meta
+            property="twitter:image"
+            content="https://avatars.githubusercontent.com/u/82671701"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="title">Round Robin algorithm</div>
+                <div class="content">
+                    <div class="input_n_button">
+                        <div class="inputs">
+                            <input
+                                class="input"
+                                id="at"
+                                type="text"
+                                placeholder="Arrival time (e.g. 1,0,2,3,4,6)"
+                                title="Valid input (e.g. 1,0,2,3,4,6)"
+                            />
+                            <input
+                                class="input"
+                                id="bt"
+                                type="text"
+                                placeholder="Burst time (e.g. 4,5,2,1,6,3)"
+                                title="Valid input (e.g. 4,5,2,1,6,3)"
+                            />
+                            <input
+                                class="input"
+                                id="tq"
+                                type="number"
+                                onkeyup="validate();"
+                                placeholder="Time quantum"
+                            />
+                        </div>
+                        <div class="btn">
+                            <button
+                                class="btns disable"
+                                id="continue_btn"
+                                disabled
+                            >
+                                Output
+                            </button>
+                        </div>
                     </div>
-                    <div class="btn">
-                        <button class="btns disable" id="continue_btn" disabled>Output</button>
-                    </div>
-                </div>
-                <div id="output" class="hide">
-                    <div class="title">Gantt chart</div>
-                    <div class="gantt" id="gantt-chart">
-                    </div>
-                    <table class="table" id="output-table">
-                    </table>
-                    <div class="avgs">
-                        <span class="text">Average turn around time is <span class="highlight" id="avgtt"></span> seconds.</span>
-                        <br>
-                        <span class="text">Average waiting time is <span class="highlight" id="avgwt"></span> seconds.</span>
+                    <div id="output" class="hide">
+                        <div class="title">Gantt chart</div>
+                        <div class="gantt" id="gantt-chart"></div>
+                        <table class="table" id="output-table"></table>
+                        <div class="avgs">
+                            <span class="text"
+                                >Average turn around time is
+                                <span class="highlight" id="avgtt"></span>
+                                seconds.</span
+                            >
+                            <br />
+                            <span class="text"
+                                >Average waiting time is
+                                <span class="highlight" id="avgwt"></span>
+                                seconds.</span
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./round_robin.js"></script>
-</body>
-
+        <script src="./round_robin.js"></script>
+    </body>
 </html>
