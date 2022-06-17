@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono';
+}
+
+$highlight-color: #2684ff;
+// $highlight-color: #406ed2;
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-around;
+        .title {
+            font-size: xx-large;
+        }
+        .content {
+            margin: 20px 0;
+            // width: 90%;
+            border: 1px solid rgba(185, 187, 190, 0.2);
+            border-radius: 2vh;
+            padding: 16px;
+            // box-shadow: 0 4px 16px 0 rgba(185, 187, 190, 0.4);
+            box-shadow: 0 4px 16px 0 rgba(38, 132, 255, 0.16);
+            .input_n_button {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .input {
+                        // width: 116%;
+                        margin: 10px;
+                        padding: 8px;
+                        border-radius: 1vh;
+                        border: 1px solid rgba(185, 187, 190, 0.6);
+                        &:focus {
+                            border: 1px solid #00000000;
+                            outline: 2px solid $highlight-color;
+                        }
+                    }
+                }
+                .btn {
+                    .btns {
+                        transition: color 0.4s ease, background-color 0.4s ease;
+                        margin: 5px;
+                        padding: 8px;
+                        background-color: white;
+                        color: $highlight-color;
+                        border-radius: 1vh;
+                        border: 1px solid $highlight-color;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $highlight-color;
+                            color: white;
+                        }
+                        &:focus {
+                            border: 1px solid #00000000;
+                            outline: 3px solid rgba(38, 132, 255, 0.6);
+                        }
+                        &.disable {
+                            border: 1px solid rgba(185, 187, 190, 0.6);
+                            color: rgba(185, 187, 190, 0.6);
+                            &:hover {
+                                cursor: default;
+                                background-color: #00000000;
+                            }
+                        }
+                    }
+                }
+            }
+            #output {
+                .title {
+                    margin: 20px 0;
+                    text-align: center;
+                    color: rgb(120, 120, 120);
+                }
+                margin: 0 auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .gantt {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    .time-period {
+                        .boxes {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+                            .box {
+                                width: 30px;
+                                height: 30px;
+                                background-color: white;
+                                border: 1px solid $highlight-color;
+                                border-radius: 5px;
+                                color: $highlight-color;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                            }
+                        }
+                        .times {
+                            display: flex;
+                            margin: 0 auto;
+                            color: rgba(185, 187, 190, 1);
+                            .time {
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+                .table {
+                    border: 1px solid rgba(185, 187, 190, 0.4);
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    th {
+                        text-align: center;
+                        padding: 5px;
+                        color: $highlight-color;
+                        // color: white;
+                        border-radius: 1vh;
+                        margin: 0;
+                        border: 1px solid rgba(185, 187, 190, 0.4);
+                    }
+                    td {
+                        text-align: center;
+                        padding: 6px;
+                        color: rgb(120, 120, 120);
+                    }
+                }
+                .avgs {
+                    margin: 20px 0;
+                    text-align: center;
+                    .text {
+                        color: rgb(120, 120, 120);
+                    }
+                    .highlight {
+                        color: $highlight-color;
+                    }
+                }
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+    }
+}

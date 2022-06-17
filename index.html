@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="title">
+                Round Robin algorithm
+            </div>
+            <div class="content">
+                <div class="input_n_button">
+                    <div class="inputs">
+                        <input class="input" id="at" type="text" placeholder="Arrival time (e.g. 1,0,2,3,4,6)" title="Valid input (e.g. 1,0,2,3,4,6)">
+                        <input class="input" id="bt" type="text" placeholder="Burst time (e.g. 4,5,2,1,6,3)" title="Valid input (e.g. 4,5,2,1,6,3)">
+                        <input class="input" id="tq" type="number" onkeyup="validate();" placeholder="Time quantum">
+                    </div>
+                    <div class="btn">
+                        <button class="btns disable" id="continue_btn" disabled>Output</button>
+                    </div>
+                </div>
+                <div id="output" class="hide">
+                    <div class="title">Gantt chart</div>
+                    <div class="gantt" id="gantt-chart">
+                    </div>
+                    <table class="table" id="output-table">
+                    </table>
+                    <div class="avgs">
+                        <span class="text">Average turn around time is <span class="highlight" id="avgtt"></span> seconds.</span>
+                        <br>
+                        <span class="text">Average waiting time is <span class="highlight" id="avgwt"></span> seconds.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./round_robin.js"></script>
+</body>
+
+</html>
