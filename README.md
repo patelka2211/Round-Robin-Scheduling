@@ -33,7 +33,7 @@ Round Robin algorithm is used by operating system to schedule running processes.
 
 # Languages
 
-Same code is available in JavaScript and Python.
+Same code is available in [JavaScript](./round_robin.js) and [Python](./round_robin.py).
 
 # About languages
 
